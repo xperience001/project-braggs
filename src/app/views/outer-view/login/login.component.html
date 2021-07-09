@@ -1,0 +1,83 @@
+<div class="whole-body">
+  <div class="background">
+    <img class="main-bg" src="assets/img/bg.png" alt="" srcset="">
+
+    <div class="kwara-logo">
+      <img src="assets/img/Kwara-logo.png" alt="" srcset="">
+      <div class="motto">
+        <img src="assets/img/motto.svg" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+
+  <div class="login-container">
+    <div class="card">
+      <div class="card-body">
+        <div class="logo">
+        </div>
+
+        <h1 class="log-title">Sign in to your Account</h1>
+        <div class="form">
+          <form class="form-body" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="username">
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>User ID</mat-label>
+                  <input matInput required placeholder="Enter your username" formControlName="username" />
+
+                  <mat-icon matSuffix>perm_identity</mat-icon>
+                  <mat-error> Username is <strong>required</strong> </mat-error>
+                </mat-form-field>
+              </p>
+            </div>
+            <div class="Password">
+              <p>
+                <mat-form-field appearance="outline" style="padding-top: 1rem !important">
+                  <mat-label>Password</mat-label>
+                  <input required matInput placeholder="Enter your password" formControlName="password"
+                    [type]="hide ? 'password' : 'text'" />
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide" type="button">
+                    <mat-icon>{{
+                      hide ? "visibility_off" : "visibility"
+                    }}</mat-icon>
+                  </button>
+                  <mat-error> Password is <strong>required</strong> </mat-error>
+                </mat-form-field>
+              </p>
+              <br />
+              <br />
+              <div class="fgttext" style="margin-top: -8px">
+                <span class="forgottext">
+                  <p>
+                    <mat-checkbox></mat-checkbox> &nbsp; keep me logged in
+                  </p>
+                  <a routerLink="/forgot-password">Forgot password?</a>
+                </span>
+              </div>
+              <div class="signup">
+                <span class="signup">
+                  Don't have an account yet?
+                  <a routerLink="/signup"><strong>Contact Us</strong></a>
+                </span>
+              </div>
+              <br />
+              <br />
+              <br />
+              <div class="Login">
+                <button [disabled]="!loginForm.valid" mat-raised-button type="submit" class="button">
+                  Login
+                  <div class="spinner-border color: white" role="status" *ngIf="loader"
+                    style="height: 20px; width: 20px; margin-left: 1rem;">
+                    <span class="sr-only"></span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

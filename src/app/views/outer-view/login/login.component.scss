@@ -1,0 +1,137 @@
+.whole-body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  background-color: #77A167
+}
+
+.background {
+  // position: relative;
+  grid-column: 1/8;
+  .main-bg{
+    height: 100vh;
+    object-fit: cover;
+    width: calc(100% + 50px);
+  }
+}
+
+.kwara-logo{
+  position: absolute;
+  top: 0;
+  width: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  left: 5rem;
+}
+
+.motto img{
+  height: 7rem;
+  width: 21rem;
+}
+
+.log-title {
+  text-align: center;
+  font: normal normal normal Segoe UI;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.login-container {
+  grid-column: 8/14;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px 0 0 50px;
+    background-color: white;
+}
+
+.card {
+  top: 7%;
+  width: 80%;
+  height: max-content;
+  background-color: white;
+  // box-shadow: 8px 0px 8px 7px rgba(0, 0, 0, 0.04);
+  margin: 0% 5% 0% 10%;
+  padding: 12% 0% 12% 0%;
+  border-radius: 5px;
+  border: none;
+}
+
+.card-body {
+  align-self: center;
+  width: 350px;
+}
+
+mat-form-field {
+  margin-top: 1rem;
+  width: 100%;
+  height: 54px;
+  border-radius: 7px;
+  opacity: 1.5;
+}
+
+.forgottext {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fgttext {
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 44px;
+  margin-right: 7px;
+  text-align: right;
+  font: normal normal normal 15px/23px Poppins;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.fgttext a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1E6700;
+}
+
+// 79A369
+
+.button {
+  height: 45px;
+  width: 100%;
+  background-color: #70AC46;
+  border-radius: 5px;
+  background: #70AC46 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  opacity: 1;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border-color: #1E6700;
+  color: white;
+}
+
+.button:disabled {
+  background-color: #a1bf96;
+  color: #fff
+}
+
+.signup {
+  text-align: center;
+  margin-top: 14px;
+  font: normal normal normal 14px/21px Poppins;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.signup a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1E6700;
+}
+
+@media screen and (max-width: 1024px) {
+
+}
